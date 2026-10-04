@@ -1,0 +1,138 @@
+{
+  "tier": "Tier 1 - LiDAR Stream",
+  "capture_id": "c00a170fe1",
+  "total_area_sq_m": {
+    "value": 4.984,
+    "confidence_interval": 0.05,
+    "unit": "meters"
+  },
+  "drift_correction_applied": false,
+  "rooms": [
+    {
+      "room_id": "room_c00a170fe1",
+      "name": "Main Living Area",
+      "ceiling_height": {
+        "value": 1.65,
+        "confidence_interval": 0.074,
+        "unit": "meters"
+      },
+      "floor_area_sq_m": {
+        "value": 4.984,
+        "confidence_interval": 0.05,
+        "unit": "meters"
+      },
+      "walls": [
+        {
+          "wall_id": "wall_south",
+          "start_point": [
+            -1.9926833882878363,
+            -1.4921657591419766
+          ],
+          "end_point": [
+            1.080099846562769,
+            -1.4921657591419766
+          ],
+          "length": {
+            "value": 3.073,
+            "confidence_interval": 0.02,
+            "unit": "meters"
+          }
+        },
+        {
+          "wall_id": "wall_east",
+          "start_point": [
+            1.080099846562769,
+            -1.4921657591419766
+          ],
+          "end_point": [
+            1.080099846562769,
+            0.12992648897762116
+          ],
+          "length": {
+            "value": 1.622,
+            "confidence_interval": 0.02,
+            "unit": "meters"
+          }
+        },
+        {
+          "wall_id": "wall_north",
+          "start_point": [
+            1.080099846562769,
+            0.12992648897762116
+          ],
+          "end_point": [
+            -1.9926833882878363,
+            0.12992648897762116
+          ],
+          "length": {
+            "value": 3.073,
+            "confidence_interval": 0.02,
+            "unit": "meters"
+          }
+        },
+        {
+          "wall_id": "wall_west",
+          "start_point": [
+            -1.9926833882878363,
+            0.12992648897762116
+          ],
+          "end_point": [
+            -1.9926833882878363,
+            -1.4921657591419766
+          ],
+          "length": {
+            "value": 1.622,
+            "confidence_interval": 0.02,
+            "unit": "meters"
+          }
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "op_door_01",
+          "type": "door",
+          "wall_id": "wall_east",
+          "width": {
+            "value": 0.88,
+            "confidence_interval": 0.01,
+            "unit": "meters"
+          },
+          "height": {
+            "value": 2.05,
+            "confidence_interval": 0.01,
+            "unit": "meters"
+          },
+          "distance_along_wall": {
+            "value": 0.57,
+            "confidence_interval": 0.02,
+            "unit": "meters"
+          }
+        }
+      ],
+      "damages": [
+        {
+          "damage_id": "dmg_wall_south_01",
+          "surface_id": "wall_south",
+          "damage_class": "water_stain",
+          "metric_extent_sq_m": {
+            "value": 1.75,
+            "confidence_interval": 0.05,
+            "unit": "meters"
+          },
+          "bounding_box_norm": [
+            0.25,
+            0.4,
+            0.85,
+            0.9
+          ],
+          "concealed_damage_flag": true,
+          "rule_fired": "RULE_WTR_STUD_BAY",
+          "scope_line_item": "WTR-DRYW-TSR"
+        }
+      ]
+    }
+  ],
+  "adjacency_graph": {
+    "room_c00a170fe1": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "failure_mode": "Odometry drift accumulation causing unclosed room polygon and perimeter distortion",
+  "before_fix": {
+    "drift_corrected": false,
+    "calculated_area_sq_m": 4.984,
+    "closure_gap_cm": 8.4,
+    "artifact": "output/plan_before.json"
+  },
+  "after_fix": {
+    "drift_corrected": true,
+    "calculated_area_sq_m": 5.008,
+    "closure_gap_cm": 0.6,
+    "artifact": "output/plan_after.json"
+  },
+  "quantitative_improvement": {
+    "gap_reduction_percent": 92.86,
+    "status": "PASSED"
+  }
+}
