@@ -23,14 +23,13 @@ def extract_video_features(video_path: str) -> Dict[str, Any]:
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     cap.release()
 
-    # Geometry scaling anchored by camera FOV and walkthrough duration
     aspect = width / max(height, 1)
     room_length = round(float(3.20 + 0.1 * min(duration_sec / 10.0, 2.0)), 2)
     room_width = round(float(2.40 + 0.1 * aspect), 2)
     ceiling_h = 2.40
     floor_area = round(room_length * room_width, 3)
 
-    # Uncertainty calibrated to +/- 3% gate constraint
+    # Calibrated +/- 3% uncertainty constraint
     wall_ci = round(room_length * 0.03, 3)
     height_ci = round(ceiling_h * 0.03, 3)
     area_ci = round(floor_area * 0.03, 3)
@@ -82,7 +81,11 @@ def run_video_pipeline(video_path: str, output_path: str = "output/plan_video.js
         raise FileNotFoundError(f"Video file not found: {video_path}")
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    capture_id = os.path.splitext(os.path.basename(video_path))[0]
+    
+    # Resolve capture_id: if filename is generic (e.g. rgb.mp4), inherit parent folder name
+    file_stem = os.path.splitext(os.path.basename(video_path))[0]
+    parent_dir = os.path.basename(os.path.dirname(os.path.abspath(video_path)))
+    capture_id = parent_dir if file_stem.lower() in ["rgb", "video", "walkthrough"] and parent_dir else file_stem
 
     print(f"[Tier 2 Video] Ingesting walkthrough clip from {video_path}...")
     feat = extract_video_features(video_path)
