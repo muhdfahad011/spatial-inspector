@@ -46,3 +46,18 @@ def compute_drift_metrics(raw_positions: np.ndarray, corrected_positions: np.nda
     max_drift = np.max(np.linalg.norm(raw_positions - corrected_positions, axis=1))
     mean_drift = np.mean(np.linalg.norm(raw_positions - corrected_positions, axis=1))
     return float(max_drift), float(mean_drift)
+
+def assess_and_correct_drift(points: np.ndarray):
+    """
+    Evaluates drift across spatial points, detects loop closure boundaries,
+    and applies trajectory correction if loop closure conditions are satisfied.
+    """
+    if len(points) < 50:
+        return points, False
+
+    loop_pair = detect_loop_closure(points)
+    if loop_pair is not None:
+        corrected = correct_trajectory_drift(points, loop_pair)
+        return corrected, True
+
+    return points, False

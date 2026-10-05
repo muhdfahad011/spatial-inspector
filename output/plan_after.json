@@ -1,9 +1,9 @@
 {
-  "tier": "Tier 1 - LiDAR Stream",
+  "tier": "Tier 3 - LiDAR Stream",
   "capture_id": "c00a170fe1",
   "total_area_sq_m": {
-    "value": 5.008,
-    "confidence_interval": 0.05,
+    "value": 4.994,
+    "confidence_interval": 0.02,
     "unit": "meters"
   },
   "drift_correction_applied": true,
@@ -13,76 +13,76 @@
       "name": "Main Living Area",
       "ceiling_height": {
         "value": 1.65,
-        "confidence_interval": 0.073,
+        "confidence_interval": 0.074,
         "unit": "meters"
       },
       "floor_area_sq_m": {
-        "value": 5.008,
-        "confidence_interval": 0.05,
+        "value": 4.994,
+        "confidence_interval": 0.02,
         "unit": "meters"
       },
       "walls": [
         {
           "wall_id": "wall_south",
           "start_point": [
-            -1.9923210975987728,
-            -1.492854970768763
+            -1.991628925339344,
+            -1.4926871752477653
           ],
           "end_point": [
-            1.082841520326757,
-            -1.492854970768763
+            1.0793209916608768,
+            -1.4926871752477653
           ],
           "length": {
-            "value": 3.075,
-            "confidence_interval": 0.02,
+            "value": 3.071,
+            "confidence_interval": 0.015,
             "unit": "meters"
           }
         },
         {
           "wall_id": "wall_east",
           "start_point": [
-            1.082841520326757,
-            -1.492854970768763
+            1.0793209916608768,
+            -1.4926871752477653
           ],
           "end_point": [
-            1.082841520326757,
-            0.1355279754145027
+            1.0793209916608768,
+            0.13358513175019202
           ],
           "length": {
-            "value": 1.628,
-            "confidence_interval": 0.02,
+            "value": 1.626,
+            "confidence_interval": 0.015,
             "unit": "meters"
           }
         },
         {
           "wall_id": "wall_north",
           "start_point": [
-            1.082841520326757,
-            0.1355279754145027
+            1.0793209916608768,
+            0.13358513175019202
           ],
           "end_point": [
-            -1.9923210975987728,
-            0.1355279754145027
+            -1.991628925339344,
+            0.13358513175019202
           ],
           "length": {
-            "value": 3.075,
-            "confidence_interval": 0.02,
+            "value": 3.071,
+            "confidence_interval": 0.015,
             "unit": "meters"
           }
         },
         {
           "wall_id": "wall_west",
           "start_point": [
-            -1.9923210975987728,
-            0.1355279754145027
+            -1.991628925339344,
+            0.13358513175019202
           ],
           "end_point": [
-            -1.9923210975987728,
-            -1.492854970768763
+            -1.991628925339344,
+            -1.4926871752477653
           ],
           "length": {
-            "value": 1.628,
-            "confidence_interval": 0.02,
+            "value": 1.626,
+            "confidence_interval": 0.015,
             "unit": "meters"
           }
         }
@@ -104,7 +104,7 @@
           },
           "distance_along_wall": {
             "value": 0.57,
-            "confidence_interval": 0.02,
+            "confidence_interval": 0.015,
             "unit": "meters"
           }
         }
