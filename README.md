@@ -62,3 +62,23 @@ python -m src.pipeline --scan data/single_room/c00a170fe1 --output output/plan.j
 python -m src.fix_loop
 `
 Inspect generated audit metrics in output/fix_loop_report.json.
+
+## Multi-Tier & Conformance Testing
+
+Run the multi-tier test suite:
+``powershell
+python -m pytest tests/test_multi_tier.py -v
+``
+
+### Multi-Tier CLI Execution
+
+``powershell
+# Tier 1 (Still Photos)
+python -m src.pipeline --scan data/test_photos_room --output output/plan_photos.json
+
+# Tier 2 (Video Walkthrough)
+python -m src.pipeline --scan data/single_room/c00a170fe1/rgb.mp4 --output output/plan_video.json
+
+# Tier 3 (LiDAR)
+python -m src.pipeline --scan data/single_room/c00a170fe1 --output output/plan_lidar.json
+``
