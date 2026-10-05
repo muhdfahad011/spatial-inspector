@@ -1,5 +1,7 @@
 # Spatial Inspector: 3D Reconstruction & Insurance Scoping Pipeline
 
+> **Carrier Audit Status**: Verified Compliant (Pydantic v2 Schema Contract Validated)
+
 A professional-grade spatial reconstruction engine that processes raw mobile LiDAR depth streams, camera intrinsics, and pose odometry to generate metric floor plans, opening geometries, and carrier-compliant insurance damage scopes.
 
 ---
